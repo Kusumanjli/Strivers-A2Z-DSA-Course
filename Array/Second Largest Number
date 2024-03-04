@@ -1,0 +1,22 @@
+def getSecondOrderElements(n: int,  a: [int]) -> [int]:
+    if (n < 2):
+        return -1
+    max_sec=float('-inf')
+    min_sec=float('inf')
+    max_ele=float('-inf')
+    min_ele=float('inf')
+    for i in range(n):
+        if min_ele>a[i]:
+            min_sec=min_ele
+            min_ele=a[i]
+        elif min_sec>a[i] and a[i]!=min_ele:
+            min_sec=a[i]
+
+    for i in range(n):
+        if max_ele<a[i]:
+            max_sec=max_ele
+            max_ele=a[i]
+        elif max_sec<a[i] and a[i]!=max_ele:
+            max_sec=a[i]
+
+    return max_sec,min_sec
