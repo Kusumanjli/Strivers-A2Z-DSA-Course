@@ -1,0 +1,6 @@
+def largestElement(arr: [], n: int) -> int:
+    max_ele=arr[0]
+    for i in range(n):
+        if max_ele<arr[i]:
+            max_ele=arr[i]
+    return max_ele
